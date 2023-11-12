@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Hi! I\'m Francisco!',
+  siteTitle: 'Hi! I\'m Nguyen!',
   siteDescription: `Create your online curriculum in just a few minutes with this starter`,
   keyWords: ['gatsbyjs', 'react', 'curriculum'],
   authorName: 'Francisco Santos',
@@ -96,7 +96,7 @@ module.exports = {
   social: {
     twitter: "https://twitter.com/_franciscodf",
     linkedin: "https://www.linkedin.com/in/santos-francisco",
-    github: "https://github.com/santosfrancisco",
+    github: "https://github.com/vinhnguyen1402",
     email: "yoshi.df@gmail.com"
   },
   siteUrl: 'https://santosfrancisco.github.io/gatsbystarter-cv',
