@@ -7,7 +7,6 @@
   "dependencies": {
     "@loadable/component": "5.12.0",
     "babel-plugin-styled-components": "1.10.6",
-    "framer-motion": "1.11.0",
     "gatsby": "^2.32.13",
     "gatsby-image": "2.4.7",
     "gatsby-plugin-google-gtag": "^2.5.0",
