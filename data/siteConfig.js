@@ -5,7 +5,7 @@ module.exports = {
   authorName: 'Vinh Nguyen Ngo',
   twitterUsername: 'nvn1402',
   githubUsername: 'vinhnguyen1402',
-  authorAvatar: '/images/avatarNguyen.jpeg',
+  authorAvatar: '/images/avatar-nguyen.jpeg',
   authorDescription: `Passionate about web development, I began my journey in 2022, initially exploring the foundations of HTML out of pure curiosity. <br />
   In just my first year of professional experience, I transitioned from a support technician role to a frontend developer.
   During this time, I immersed myself in JavaScript and React, finding joy in crafting interactive and user-friendly web interfaces. <br />
@@ -86,12 +86,12 @@ module.exports = {
   ],
   portifolio: [
     {
-      image: '/images/GatsbyPortfolio.png',
+      image: '/images/gatsby-portfolio.png',
       description: 'Gatsby Resume',
       url: 'https://github.com/vinhnguyen1402/porfolio_gatsby',
     },
     {
-      image: '/images/TheGroceryCoWebsite.png',
+      image: '/images/the-grocery-co-website.png',
       description: 'The Grocery Co. Website',
       url: 'https://github.com/Vy-X-S/BUS118W-Group_5#readme',
     },
