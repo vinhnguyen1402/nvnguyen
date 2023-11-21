@@ -9,7 +9,13 @@ module.exports = {
   authorDescription: `Passionate about web development, I began my journey in 2022, initially exploring the foundations of HTML out of pure curiosity. <br />
   In just my first year of professional experience, I transitioned from a support technician role to a frontend developer.
   During this time, I immersed myself in JavaScript and React, finding joy in crafting interactive and user-friendly web interfaces. <br />
-  The continuous challenges and opportunities for growth keep my enthusiasm alive as I contribute to creating engaging web experiences.</strong>`,
+  The continuous challenges and opportunities for growth keep my enthusiasm alive as I contribute to creating engaging web experiences.</strong><br />
+  With all of my knowledge and experience, I will make every effort to contribute to the company’s growth, thereby making valuable products for society.`,
+  school1: 'Evergreen Valley College',
+  school1Description: 'AS Degree for transfer in MIS  2020 - 2022',
+  school2: 'San Jose State University',
+  school2Description:
+    ' Currently working on the BA Degree in MIS 2022 - Expected Graduated 2024',
   skills: [
     {
       name: 'HTML',
@@ -40,51 +46,40 @@ module.exports = {
   jobs: [
     /* more jobs here */
     {
-      company: 'Gympass',
+      company: 'Santa Clara County',
       begin: {
-        month: 'sep',
-        year: '2019',
+        month: 'Nov',
+        year: '2023',
       },
-      duration: null,
-      occupation: 'Frontend developer',
+      duration: 'Present',
+      occupation: 'Mental Health Peer Support Worker',
       description:
-        'I am part of the Corporate team, responsible for the development and maintenance of the employee management platform, giving more and more autonomy to partner companies.',
+        'Provides empathetic assistance and understanding to individuals dealing with mental health challenges, leveraging their own lived experiences to offer peer support, encouragement, and practical coping strategies on the path to recovery.',
     },
     {
-      company: 'Lendico',
+      company: 'DC&K Inc.',
       begin: {
-        month: 'apr',
-        year: '2018',
+        month: 'Apr',
+        year: '2021',
       },
-      duration: null,
-      occupation: 'Frontend developer',
+      duration: '2 years 6 months',
+      occupation: 'Co-Manager',
       description:
-        'I integrate the Frontend team responsible for developing and maintaining the online lending platform.',
+        'Maintain the operation and scheduling. Offered advice and assistance to customers, paying attention to special needs or wants. Provided primary customer support to internal and external customers.',
     },
     {
-      company: 'Anapro',
+      company: 'Tastea',
       begin: {
-        month: 'dec',
-        year: '2016',
+        month: 'Jan',
+        year: '2020',
       },
-      duration: '1 yr e 5 mos',
-      occupation: 'Fullstack developer',
+      duration: '3 months',
+      occupation: 'Barista',
       description:
-        'Development and maintenance, corrective and preventive, of web applications for the real estate market.',
-    },
-    {
-      company: 'Anapro',
-      begin: {
-        month: 'set',
-        year: '2012',
-      },
-      duration: '4 yrs e 3 mos',
-      occupation: 'Support Technician',
-      description:
-        'Responsible for the implementation and parameterization of the system, training and customer support. Acting also in person in real estate launches guaranteeing the success and good use of the tool.',
+        'Maintained customer satisfaction while handling product returns quickly and professionally. Handled daily credit and cash transactions for customers with accuracy and speed.',
     },
   ],
-  portifolio: [
+  portfolio: [
     {
       image: '/images/gatsby-portfolio.png',
       description: 'Gatsby Resume',
@@ -95,7 +90,7 @@ module.exports = {
       description: 'The Grocery Co. Website',
       url: 'https://github.com/Vy-X-S/BUS118W-Group_5#readme',
     },
-    /* more portifolio items here */
+    /* more portfolio items here */
   ],
   social: {
     twitter: 'https://twitter.com/',
@@ -119,8 +114,8 @@ module.exports = {
       url: '/',
     },
     {
-      label: 'Portifolio',
-      url: '/portifolio',
+      label: 'Portfolio',
+      url: '/portfolio',
     },
   ],
 }

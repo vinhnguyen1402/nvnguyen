@@ -11,9 +11,9 @@ import Wrapper from '../components/wrapper'
 const Layout = loadable(() => import('../components/layout'))
 
 const Image = styled.img`
-  max-height: 220px;
-  max-width: 220px;
-  object-fit: cover;
+  height: 220px;
+  width: 220px;
+  object-fit: contain;
   object-position: center center;
   border-radius: 10px;
   box-shadow: 24px 47px 79px -21px rgba(0,0,0,0.51);
@@ -31,9 +31,9 @@ const JobCard = styled.a`
   `}
 `
 
-const Portifolio = ({ className, location }) => {
-  const title = "Portifolio"
-  const { keywords, portifolio } = siteConfig
+const Portfolio = ({ className, location }) => {
+  const title = "Portfolio"
+  const { keywords, portfolio } = siteConfig
   return (
     <Layout location={location}>
       <SEO
@@ -49,7 +49,7 @@ const Portifolio = ({ className, location }) => {
       <Wrapper className={className}>
         <Container className="page-content" fluid>
           <Row>
-            {portifolio.map(job => (
+            {portfolio.map(job => (
               <Col
                 key={job.description}
                 align="center"
@@ -71,7 +71,7 @@ const Portifolio = ({ className, location }) => {
   )
 }
 
-export default styled(Portifolio)`
+export default styled(Portfolio)`
   .page-content {
     max-width: 100%;
     margin-bottom: 40px;

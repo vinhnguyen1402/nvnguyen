@@ -97,6 +97,14 @@ const Home = ({ className, location }) => {
               <Skills title="Skills" skills={siteConfig.skills} />
             </Col>
           </Row>
+          <Row>
+            <Col xs={8} sm={8}>
+              <About title="Education" text={siteConfig.school1Description} schoolName={siteConfig.school1} />
+            </Col>
+            <Col xs={8} sm={8}>
+              <About title='' text={siteConfig.school2Description} schoolName={siteConfig.school2} />
+            </Col>
+          </Row>
           <Separator />
           <Timeline />
           <Separator />
