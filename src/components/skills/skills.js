@@ -11,4 +11,5 @@ export default styled(({ className, title = 'Skills', skills = [] }) => (
   </div>
 ))`
   width: 100%;
+  margin-bottom: 1.45rem;
 `
