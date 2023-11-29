@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import siteConfig from '../../data/siteConfig'
 import { withPrefix } from 'gatsby'
 import loadable from '@loadable/component'
+import Stars from '../components/stars'
 
 import Hero from '../components/hero'
 import SEO from '../components/SEO'
@@ -26,20 +27,20 @@ const Separator = styled.hr`
 const Home = ({ className, location }) => {
   // validate siteConfig settings
 
-  if (siteConfig.googleAnalyticsId === 'UA-000000000-1') {
-    console.error(
-      'WARNING: Please set a proper googleAnalyticsId. See https://analytics.google.com for details.'
-    )
-  }
+  //Google analytic link warning:
+  // if (siteConfig.googleAnalyticsId === 'UA-000000000-1') {
+  //   console.error(
+  //     'WARNING: Please set a proper googleAnalyticsId. See https://analytics.google.com for details.'
+  //   )
+  // }
 
   const title = siteConfig.siteTitle
   const { keywords } = siteConfig
+
   return (
     <Layout location={location}>
       <SEO title={title} keywords={keywords} />
-
       <Hero heroImg={siteConfig.siteCover} title={title} />
-
       <Wrapper className={className}>
         <Container className="page-content" fluid>
           <Row>
@@ -99,10 +100,18 @@ const Home = ({ className, location }) => {
           </Row>
           <Row>
             <Col xs={8} sm={8}>
-              <About title="Education" text={siteConfig.school1Description} schoolName={siteConfig.school1} />
+              <About
+                title="Education"
+                text={siteConfig.school1Description}
+                schoolName={siteConfig.school1}
+              />
             </Col>
             <Col xs={8} sm={8}>
-              <About title='' text={siteConfig.school2Description} schoolName={siteConfig.school2} />
+              <About
+                title=""
+                text={siteConfig.school2Description}
+                schoolName={siteConfig.school2}
+              />
             </Col>
           </Row>
           <Separator />
