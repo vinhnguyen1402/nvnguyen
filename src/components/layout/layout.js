@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
 import { ResetCSS, GlobalStyle, themes } from '../styles'
@@ -15,6 +15,8 @@ const StyledContainer = styled.div`
 
 const Layout = ({ children, location }) => {
   const [theme, setTheme] = useDarkMode()
+  const [width, setWidth] = useState(0)
+  const [height, setHeight] = useState(0)
 
   const sizeSmall = 1
   const sizeMedium = 2
@@ -24,7 +26,8 @@ const Layout = ({ children, location }) => {
   const multipleBoxShadow = n => {
     let value = ''
     for (let i = 1; i <= n; i++) {
-      value += `${Math.random() * 2000}px ${Math.random() * 2000}px ${
+      value += `${Math.random() * window.innerWidth}px ${Math.random() *
+        window.innerHeight}px ${
         theme == 'dark' ? '#FFF' : theme === 'light' ? '#000' : ''
       }`
       if (i !== n) {
@@ -33,6 +36,7 @@ const Layout = ({ children, location }) => {
     }
     return value
   }
+
   const shadowsSmall = multipleBoxShadow(700)
   const shadowsMedium = multipleBoxShadow(200)
   const shadowsBig = multipleBoxShadow(100)
@@ -43,7 +47,22 @@ const Layout = ({ children, location }) => {
 
   useEffect(() => {
     animateOnScroll()
+    const setNewWidth = () => {
+      const newWidth = window.innerWidth
+      setWidth(newWidth)
+    }
+    const setNewHeight = () => {
+      const setNewHeight = window.innerHeight
+      setHeight(setNewHeight)
+    }
+    window.addEventListener('resize', setNewWidth)
+    window.addEventListener('resize', setNewHeight)
+    return () => {
+      window.removeEventListener('resize', setNewWidth)
+      window.removeEventListener('resize', setNewHeight)
+    }
   }, [])
+
   return (
     <ThemeProvider theme={themes[theme || 'light']}>
       <ResetCSS />
