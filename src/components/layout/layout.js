@@ -15,25 +15,34 @@ const StyledContainer = styled.div`
 
 const Layout = ({ children, location }) => {
   const [theme, setTheme] = useDarkMode()
-  const [width, setWidth] = useState(0)
-  const [height, setHeight] = useState(0)
+
+  const [, refresh] = useState(null)
 
   const sizeSmall = 1
   const sizeMedium = 2
   const sizeBig = 3
 
-  // Function to generate multiple box shadows
+  // document.addEventListener("DOMContentLoaded", function() {
+  //   var documentHeight = document.documentElement.scrollHeight;
+  //   console.log(documentHeight);
+  // });
+
   const multipleBoxShadow = n => {
     let value = ''
+    const dimension =
+      document.getElementById('___gatsby').scrollHeight > window.innerWidth
+        ? document.getElementById('___gatsby').scrollHeight
+        : window.innerWidth
+
     for (let i = 1; i <= n; i++) {
-      value += `${Math.random() * window.innerWidth}px ${Math.random() *
-        window.innerHeight}px ${
-        theme == 'dark' ? '#FFF' : theme === 'light' ? '#000' : ''
+      value += `${Math.random() * dimension}px ${Math.random() * dimension}px ${
+        theme === 'dark' ? '#FFF' : theme === 'light' ? '#000' : ''
       }`
       if (i !== n) {
         value += ', '
       }
     }
+
     return value
   }
 
@@ -43,23 +52,17 @@ const Layout = ({ children, location }) => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-  }, [])
 
-  useEffect(() => {
     animateOnScroll()
-    const setNewWidth = () => {
-      const newWidth = window.innerWidth
-      setWidth(newWidth)
+
+    const onResize = () => {
+      refresh(window.innerWidth + window.innerHeight)
     }
-    const setNewHeight = () => {
-      const setNewHeight = window.innerHeight
-      setHeight(setNewHeight)
-    }
-    window.addEventListener('resize', setNewWidth)
-    window.addEventListener('resize', setNewHeight)
+    onResize()
+    window.addEventListener('resize', onResize)
+
     return () => {
-      window.removeEventListener('resize', setNewWidth)
-      window.removeEventListener('resize', setNewHeight)
+      window.removeEventListener('resize', onResize)
     }
   }, [])
 
@@ -81,7 +84,7 @@ const Layout = ({ children, location }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.string.isRequired,
+  location: PropTypes.object.isRequired,
 }
 
 export default Layout

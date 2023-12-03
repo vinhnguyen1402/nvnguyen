@@ -5,8 +5,6 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import siteConfig from '../../data/siteConfig'
 import { withPrefix } from 'gatsby'
 import loadable from '@loadable/component'
-import Stars from '../components/stars'
-
 import Hero from '../components/hero'
 import SEO from '../components/SEO'
 import Wrapper from '../components/wrapper'
