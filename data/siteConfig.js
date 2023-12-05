@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: "Hi! I'm Nguyen!",
   siteDescription: `Create your online curriculum in just a few minutes with this starter`,
-  keyWords: ['gatsbyjs', 'react', 'curriculum'],
+  keyWords: ['vinhnguyenngo','Vinh Nguyen Ngo','nvnguyen','Nguyen','Vinh Nguyen','gatsbyjs', 'react', 'curriculum'],
   authorName: 'Vinh Nguyen Ngo',
   twitterUsername: 'nvn1402',
   githubUsername: 'vinhnguyen1402',

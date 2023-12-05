@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components'
-import { themes } from '../styles'
 
 const animStar = keyframes`
   from {
