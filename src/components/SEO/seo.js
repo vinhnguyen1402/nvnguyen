@@ -105,15 +105,15 @@ const SEO = memo(props => {
 
   return (
     <Helmet>
-      <title>{title ?? 'Vinh Nguyen Developer'}</title>
+      <title>{title ?? 'NVNGUYEN - Vinh Nguyen Developer'}</title>
       <meta
         name="description"
-        content={description || 'Vinh Nguyen Developer'}
+        content={description || 'NVNGUYEN - Vinh Nguyen Developer'}
       />
-      <meta itemprop="name" content={title ?? 'Vinh Nguyen Developer'} />
+      <meta itemprop="name" content={title ?? 'NVNGUYEN - Vinh Nguyen Developer'} />
       <meta
         itemprop="description"
-        content={description || 'Vinh Nguyen Developer'}
+        content={description || 'NVNGUYEN - Vinh Nguyen Developer'}
       />
       <meta itemprop="image" content={image} />
       <meta name="twitter:card" content="summary_large_image" />
@@ -121,16 +121,16 @@ const SEO = memo(props => {
       <meta name="twitter:creator" content="@nvnguyen" />
       <meta
         name="twitter:title"
-        content={title ? `Vinh Nguyen: ${title}` : `Vinh Nguyen Developer`}
+        content={title ? `Vinh Nguyen: ${title}` : `NVNGUYEN - Vinh Nguyen Developer`}
       />
       <meta
         name="twitter:description"
-        content={`SEODescription` || `Vinh Nguyen Developer`}
+        content={`SEODescription` || `NVNGUYEN - Vinh Nguyen Developer`}
       />
       {/* <meta name="twitter:image" content={SEOImageURL || fallbackLogo} /> */}
       <meta
         property="og:title"
-        content={title ? `Vinh Nguyen: ${title}` : 'Vinh Nguyen Developer'}
+        content={title ? `Vinh Nguyen: ${title}` : 'NVNGUYEN - Vinh Nguyen Developer'}
       />
       {/* <meta property="og:image" content={SEOImageURL || fallbackLogo} /> */}
       <meta property="og:image:width" content={1200} />
@@ -141,8 +141,8 @@ const SEO = memo(props => {
         content={SEODescription || fallbackDescription}
       /> */}
       <meta property="og:locale" content="en_GB" />
-      {/* <meta property="og:url" content={myPath} /> */}
-      {/* <link rel="canonical" href={myPath} /> */}
+      <meta property="og:url" content="https://www.nvnguyen.com/" />
+      <link rel="canonical" href="https://www.nvnguyen.com/" />
       <meta
         name="facebook-domain-verification"
         content="yftph99ln6t2q5v3om8t5jcd9id5dx"

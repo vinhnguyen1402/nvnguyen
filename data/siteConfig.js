@@ -81,14 +81,14 @@ module.exports = {
   ],
   portfolio: [
     {
-      image: '/images/gatsby-portfolio.png',
+      image: '/images/personal_website.png',
       description: 'Gatsby Resume',
       url: 'https://github.com/vinhnguyen1402/porfolio_gatsby',
     },
     {
-      image: '/images/the-grocery-co-website.png',
+      image: '/images/the_grocery_co.png',
       description: 'The Grocery Co. Website',
-      url: 'https://github.com/Vy-X-S/BUS118W-Group_5#readme',
+      url: 'https://github.com/vinhnguyen1402/the_grocery_co',
     },
     /* more portfolio items here */
   ],

@@ -26,18 +26,18 @@ const Home = ({ className, location }) => {
   // validate siteConfig settings
 
   //Google analytic link warning:
-  // if (siteConfig.googleAnalyticsId === 'UA-000000000-1') {
-  //   console.error(
-  //     'WARNING: Please set a proper googleAnalyticsId. See https://analytics.google.com for details.'
-  //   )
-  // }
+  if (siteConfig.googleAnalyticsId === 'UA-000000000-1') {
+    console.error(
+      'WARNING: Please set a proper googleAnalyticsId. See https://analytics.google.com for details.'
+    )
+  }
 
   const title = siteConfig.siteTitle
   const { keywords } = siteConfig
 
   return (
     <Layout location={location}>
-      <SEO title={title} keywords={keywords} />
+      {/* <SEO title={title} keywords={keywords} /> */}
       <Hero heroImg={siteConfig.siteCover} title={title} />
       <Wrapper className={className}>
         <Container className="page-content" fluid>
@@ -167,3 +167,6 @@ export default styled(Home)`
     color: #c23a2b;
   }
 `
+export const Head = () => (
+  <SEO />
+)
