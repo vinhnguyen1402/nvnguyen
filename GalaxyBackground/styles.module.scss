@@ -1,0 +1,86 @@
+$responsiveValue: 200;
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(unquote('-#{$responsiveValue}vh'));
+  }
+}
+
+@function generateBoxShadow($n) {
+  $value: '#{random($responsiveValue)}vw #{random($responsiveValue)}vh var(--white)';
+  @for $i from 2 through $n {
+    $value: '#{$value}, #{random($responsiveValue)}vw #{random($responsiveValue)}vh var(--white)';
+  }
+  @return unquote($value);
+}
+
+$shadowSmall: generateBoxShadow(700);
+$shadowMedium: generateBoxShadow(200);
+$shadowBig: generateBoxShadow(100);
+
+.container {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  inset: 0 0 0 0;
+  z-index: -1;
+  .content {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+  }
+  .stars1 {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadowSmall;
+    animation: animStar 50s linear infinite;
+    &::after {
+      content: '';
+      position: absolute;
+      top: unquote('#{$responsiveValue}vh');
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      box-shadow: $shadowSmall;
+    }
+  }
+  .stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadowMedium;
+    animation: animStar 100s linear infinite;
+    &::after {
+      content: '';
+      position: absolute;
+      top: unquote('#{$responsiveValue}vh');
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      box-shadow: $shadowMedium;
+    }
+  }
+  .stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadowBig;
+    animation: animStar 150s linear infinite;
+    &::after {
+      content: '';
+      position: absolute;
+      top: unquote('#{$responsiveValue}vh');
+      width: 3px;
+      height: 3px;
+      background: transparent;
+      box-shadow: $shadowBig;
+    }
+  }
+}
