@@ -5,7 +5,7 @@ module.exports = {
   authorName: 'Vinh Nguyen Ngo',
   twitterUsername: 'nvn1402',
   githubUsername: 'vinhnguyen1402',
-  authorAvatar: '/images/avatar-nguyen.jpeg',
+  authorAvatar: '/images/avatar-nguyen-1.jpeg',
   authorDescription: `Passionate about web development, I began my journey in 2022, initially exploring the foundations of HTML out of pure curiosity. <br />
   In just my first year of professional experience, I transitioned from a support technician role to a frontend developer.
   During this time, I immersed myself in JavaScript and React, finding joy in crafting interactive and user-friendly web interfaces. <br />
@@ -15,7 +15,7 @@ module.exports = {
   school1Description: 'AS Degree for transfer in MIS  2020 - 2022',
   school2: 'San Jose State University',
   school2Description:
-    ' Currently working on the BA Degree in MIS 2022 - Expected Graduated 2024',
+    'Bachelor Degree in MIS 2022 - 2024',
   skills: [
     {
       name: 'HTML',
@@ -41,6 +41,10 @@ module.exports = {
       name: 'Git',
       level: 70,
     },
+    {
+      name: 'Project Management',
+      level: 80,
+    }
     /* more skills here */
   ],
   jobs: [
@@ -48,10 +52,21 @@ module.exports = {
     {
       company: 'Santa Clara County',
       begin: {
+        month: 'Apr',
+        year: '2025',
+      },
+      duration: 'Present',
+      occupation: 'Translator/ Interpreter',
+      description:
+        'Provides translation and interpretation services to internal departments county wide. Project management for each and every request to ensure providing the best customer service and work quality.',
+    },
+    {
+      company: 'Santa Clara County',
+      begin: {
         month: 'Nov',
         year: '2023',
       },
-      duration: 'Present',
+      duration: '1 year 5 months',
       occupation: 'Mental Health Peer Support Worker',
       description:
         'Provides empathetic assistance and understanding to individuals dealing with mental health challenges, leveraging their own lived experiences to offer peer support, encouragement, and practical coping strategies on the path to recovery.',
